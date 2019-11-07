@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fi">
+<meta charset="UTF-8" />
+
+    <link rel="stylesheet" type="text/css" href="tyyli.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+    
+<head>
+<title>Kyselylomake</title>
+</head>
+    
+<body>
+<h1>Kysely ruokalatyytyväisyydestä</h1>
+
+<div class="content">
+<form onsubmit="return false" id="kysely">
+              
+<!-- alasvetovalikko -->
+            Status?<br>
+            <select id="valinta">
+            <option value="opis">Opiskelija</option>
+            <option value="ope">Opettaja</option>
+            <option value="muu">Muu</option>
+            </select>
+            <br><br>
+    
+<!-- Tämä kysymys aluksi avoin, myöhemmin monivalinnaksi jos mahdollista -->
+            Kuinka usein asioit kouluruokalassa?<br>
+            <label for="vastaus">Vastaus:
+            <input type="text" id="vastaus"></label><br>
+            <br>
+    
+            Jos et asioi ollenkaan tai todella harvoin niin miksi?<br>
+            <label for="vastaus2">Vastaus:
+            <input type="text" id="vastaus2"></label><br>
+            <br>
+    
+<!-- checkbox button-->
+            Mikä lisäisi/parantaisi ruokalassa asioimistasi?:<br>
+            <input type="checkbox" name="parannus" value="ruoka"> Ruoan laadun parannus<br>
+            <input type="checkbox" name="parannus" value="palvelu"> Palvelun laatu<br>
+            <input type="checkbox" name="parannus" value="hinta"> Hintojen muutos<br>
+            <input type="checkbox" name="parannus" value="siisteys"> Yleisen siisteyden parantaminen<br>
+            <input type="checkbox" name="parannus" value="muuta"> Muu<br>
+            <br>
+            
+            Jos vastasit äskeiseen kysymykseen "Muu" kirjoita alle mitä se olisi:<br>
+            <label for="vastaus3">Vastaus:
+            <input type="text" id="vastaus3"></label><br>
+            <br>
+    
+            Halutessasi voit kirjoittaa tähän lisätietoja koskien vastauksiasi tai, <br> jos mielessäsi on jotain, mitä emme tulleet kysyneeksi:<br>
+            <label for="vastaus3">Vastaus:
+            <input type="text" id="vastaus3"></label><br>
+            <br>
+    
+            <input type="submit" value="Lähetä vastaus" onclick="kysely()">
+</form>
+ </div>   
+</body>
+</html>
